@@ -36,7 +36,7 @@ const SignUp = () => {
   };
   return (
     <>
-      <div className="hero max-h-screen my-14 bg-slate-100 ">
+      <div className="hero min-h-screen my-14 bg-slate-100 ">
         <div className="hero-content flex-col ">
           <div className="text-center ">
             <h1 className="text-5xl font-bold mb-7">Sign Up!</h1>
