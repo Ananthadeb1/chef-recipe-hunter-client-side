@@ -3,7 +3,7 @@ import RecipeDetails from "../RecipeDetails/RecipeDetails";
 
 const ChefsDetails = () => {
   const chef = useLoaderData();
-  const {  image, name, experience, number_of_recipes, likes, recipes } =
+  const {  image,bio, name, experience, number_of_recipes, likes, recipes } =
     chef;
   return (
     <>
@@ -12,12 +12,20 @@ const ChefsDetails = () => {
         <img src={image} className="w-3/1.5 h-[500px]" alt="" />
         <div className=" ml-10 w-full md:w-[60%]">
         <h1>
+            <span className="font-bold text-3xl ">Name: </span>
+            <span className="text-2xl">{name} </span>
+          </h1>
+        <h1>
+            <span className="font-bold text-3xl ">Bio: </span>
+            <span className="text-sm">{bio} </span>
+          </h1>
+        <h1>
             <span className="font-bold text-3xl ">Experience: </span>
             <span className="text-2xl">{experience} years</span>
           </h1>
         <h1>
             <span className="font-bold text-3xl ">Total Recipes: </span>
-            <span className="text-2xl">{number_of_recipes} years</span>
+            <span className="text-2xl">{number_of_recipes} </span>
           </h1>
         <h1>
             <span className="font-bold text-3xl ">Total Likes: </span>
