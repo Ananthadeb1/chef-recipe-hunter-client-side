@@ -9,7 +9,7 @@ const Home = () => {
         <div>
             <Banner></Banner>
             <div>
-                <h2 className='text-5xl font-bold mt-10'>Our Popular Chefs</h2>
+                <h2 className='text-5xl text-center font-bold mt-10'>Our Popular Chefs</h2>
                 <div className='container flex flex-col justify-center p-4 w-[90%] mx-auto'>
                     <div className='grid grid-cols-1 gap-10 lg:grid-cols-3 sm:grid-cols-2'>
                         {
