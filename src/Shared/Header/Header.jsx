@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Aurhentications/AuthProvier/AuthProvider";
 import { toast } from "react-hot-toast";
 
@@ -19,16 +19,16 @@ const Header = () => {
   const navOptions = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <NavLink  to="/" className={({isActive}) =>  isActive ? 'text-orange-500 font-bold mx-4': 'mx-4'}>Home</NavLink>
       </li>
       {user ? ( 
           <li>
-            <Link onClick={handleSignOut}>Sign Out</Link>
+            <NavLink onClick={handleSignOut} >Sign Out</NavLink>
           </li>
       ) : (
         
           <li>
-            <Link to="/login">LogIn</Link>
+            <NavLink to="/login" className={({isActive}) => isActive ? 'text-orange-500 font-bold mx-4': 'mx-4'}>LogIn</NavLink>
           </li>
       )}
     </>
@@ -56,7 +56,7 @@ const Header = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3  z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
+              className=" menu-sm dropdown-content mt-3  z-[1] p-2 shadow bg-base-100 rounded-box w-52 "
             >
               {navOptions}
             </ul>
@@ -64,7 +64,7 @@ const Header = () => {
           <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
         </div>
         <div className="navbar-center hidden lg:flex ">
-          <ul className="menu menu-horizontal px-1 ">
+          <ul className="menu-horizontal px-1 ">
             {navOptions}
           </ul>
         </div>
