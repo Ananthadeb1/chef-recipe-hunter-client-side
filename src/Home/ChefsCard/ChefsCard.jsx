@@ -12,7 +12,7 @@ const ChefsCard = ({chef}) => {
                     <h1>Total Recipes: {number_of_recipes}</h1>
                     <h1>{likes} likes</h1>
                 </div>
-                <Link to={`courses/course/${chef.id}`}>
+                <Link to={`/chef/${chef.id}`}>
                     <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-600 text-white hover:bg-violet-800">Details</button>
                 </Link>
             </div>

@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 const Banner = () => {
     
     return (
-        <div >
+        <div className="bg-white">
             <div className='mx-5 flex flex-col md:flex-row px-5 items-center'>
                 <img src="https://img.freepik.com/premium-vector/smiling-chef-cartoon-character_8250-10.jpg?w=740" className="w-3/1.5" alt="" />
                 <div className=' w-full md:w-[60%]'>
