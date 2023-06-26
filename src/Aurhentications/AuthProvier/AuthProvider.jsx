@@ -9,6 +9,7 @@ const auth = getAuth(app);
 const AuthProvider = ({children}) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [chefs ,setChefs] = useState([]);
 
      // email password signup 
     const createUser = (email, password) => {
@@ -46,6 +47,12 @@ const AuthProvider = ({children}) => {
 
     }, []);
 
+    useEffect(() => {
+        fetch('http://localhost:5000/chefs')
+            .then(res => res.json())
+            .then(data => setChefs(data))
+    }, [])
+
     const authInfo={
         logIn,
         createUser,
@@ -53,6 +60,7 @@ const AuthProvider = ({children}) => {
         user,
         googleSignIn,
         loading,
+        chefs,
     }
     return (
         <div>
