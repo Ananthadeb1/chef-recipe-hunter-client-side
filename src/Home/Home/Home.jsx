@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Banner from "../Banner/Banner";
 import ChefsCard from "../ChefsCard/ChefsCard";
 import { AuthContext } from "../../Aurhentications/AuthProvier/AuthProvider";
+import AboutUs from "../../AboutUs/AboutUs";
 
 const Home = () => {
     const { chefs } = useContext(AuthContext);
@@ -19,7 +20,7 @@ const Home = () => {
                 </div>
 
             </div>
-            
+            <AboutUs></AboutUs>
         </div>
     );
 };
