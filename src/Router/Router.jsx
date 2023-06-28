@@ -4,11 +4,15 @@ import LogIn from "../Aurhentications/LogIn/LogIn";
 import SignUp from "../Aurhentications/SignUp/SignUp";
 import Home from "../Home/Home/Home";
 import ChefsDetails from "../ChefsDetails/ChefsDetails";
+import Blog from "../Blog/Blog";
+import PrivateRoute from "../Shared/PrivetRoute/PrivetRoute";
+import ErrorPage from "../Shared/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -24,12 +28,16 @@ const router = createBrowserRouter([
       },
       {
         path: "chef/:chefId",
-        element: <ChefsDetails></ChefsDetails>,
+        element: <PrivateRoute><ChefsDetails></ChefsDetails></PrivateRoute>,
         loader: ({ params }) =>
           fetch(
             `http://localhost:5000/chef/${params.chefId}`
           ),
       },
+      {
+        path: "/blog",
+        element: <Blog></Blog>
+      }
     ],
   },
 ]);

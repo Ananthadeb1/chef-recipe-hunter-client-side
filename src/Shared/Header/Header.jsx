@@ -1,7 +1,9 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Aurhentications/AuthProvier/AuthProvider";
 import { toast } from "react-hot-toast";
+import { FaUser } from "react-icons/fa";
 
 const Header = () => {
 
@@ -21,9 +23,12 @@ const Header = () => {
       <li>
         <NavLink  to="/" className={({isActive}) =>  isActive ? 'text-orange-500 font-bold mx-4': 'mx-4'}>Home</NavLink>
       </li>
+      <li>
+        <NavLink  to="/blog" className={({isActive}) =>  isActive ? 'text-orange-500 font-bold mx-4': 'mx-4'}>Blog</NavLink>
+      </li>
       {user ? ( 
           <li>
-            <NavLink onClick={handleSignOut} >Sign Out</NavLink>
+            <NavLink onClick={handleSignOut} >SignOut</NavLink>
           </li>
       ) : (
         
@@ -61,7 +66,7 @@ const Header = () => {
               {navOptions}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <a className="btn btn-ghost normal-case text-xl">Chef's World</a>
         </div>
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu-horizontal px-1 ">
@@ -69,7 +74,9 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <a className="btn">
+            <FaUser></FaUser>
+          </a>
         </div>
       </div>
     </>
