@@ -1,10 +1,11 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvier/AuthProvider";
 import { toast } from "react-hot-toast";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const SignUp = () => {
+  const [err, setErr] = useState('');
   const { createUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -12,11 +13,14 @@ const SignUp = () => {
   const handleSignUp = (event) => {
     event.preventDefault();
     const form = event.target;
-    // const name = form.name.value;
-    // const photoURL = form.photoURL.value;
     const email = form.email.value;
     const password = form.password.value;
-    createUser(email, password)
+    if (password.length < 6) {
+      setErr('Password must be at least 6 characters long');
+    }
+    else{
+      setErr('')
+      createUser(email, password)
       .then((res) => {
         // Signed in
         const user = res.user;
@@ -24,15 +28,16 @@ const SignUp = () => {
         toast.success("Account Created Succesfully")
         .catch((error) => {
           const errorMessage = error.message;
-          toast.error(errorMessage);
+          console.log(errorMessage);
         });
       })
       .catch((error) => {
         const errorMessage = error.message;
-        toast.error(errorMessage);
+        console.log(errorMessage);
       });
-    navigate(from, { replace: true });
-    form.reset();
+      navigate(from, { replace: true });
+      form.reset();
+    }
   };
   return (
     <>
@@ -54,7 +59,7 @@ const SignUp = () => {
                   type="text"
                   name="name"
                   placeholder="Name"
-                  className="input input-bordered text-white"
+                  className="input input-bordered text-white" required
                 />
               </div>
               <div className="form-control ">
@@ -65,7 +70,7 @@ const SignUp = () => {
                   type="photoURL"
                   name="photoULR"
                   placeholder="PhotoURl"
-                  className="input input-bordered text-white"
+                  className="input input-bordered text-white" required
                 />
               </div>
               <div className="form-control ">
@@ -76,7 +81,7 @@ const SignUp = () => {
                   type="text"
                   name="email"
                   placeholder="email"
-                  className="input input-bordered text-white"
+                  className="input input-bordered text-white" required
                 />
               </div>
               <div className="form-control">
@@ -87,9 +92,10 @@ const SignUp = () => {
                   type="password"
                   placeholder="password"
                   name="password"
-                  className="input input-bordered text-white"
+                  className="input input-bordered text-white" required
                 />
               </div>
+              <p className="text-red-600">{err}</p>
               <div className="form-control mt-6">
                 <button type="submit" className="btn btn-primary">
                   SignUp
