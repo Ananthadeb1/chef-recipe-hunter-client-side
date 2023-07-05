@@ -59,7 +59,7 @@ const SignUp = () => {
                   type="text"
                   name="name"
                   placeholder="Name"
-                  className="input input-bordered text-white" required
+                  className="input input-bordered  " required
                 />
               </div>
               <div className="form-control ">
@@ -70,7 +70,7 @@ const SignUp = () => {
                   type="photoURL"
                   name="photoULR"
                   placeholder="PhotoURl"
-                  className="input input-bordered text-white" required
+                  className="input input-bordered  " required
                 />
               </div>
               <div className="form-control ">
@@ -81,7 +81,7 @@ const SignUp = () => {
                   type="text"
                   name="email"
                   placeholder="email"
-                  className="input input-bordered text-white" required
+                  className="input input-bordered  " required
                 />
               </div>
               <div className="form-control">
@@ -92,7 +92,7 @@ const SignUp = () => {
                   type="password"
                   placeholder="password"
                   name="password"
-                  className="input input-bordered text-white" required
+                  className="input input-bordered  " required
                 />
               </div>
               <p className="text-red-600">{err}</p>

@@ -54,7 +54,7 @@ const LogIn = () => {
                   type="text"
                   name="email"
                   placeholder="email"
-                  className="input input-bordered text-white"
+                  className="input input-bordered "
                 />
               </div>
               <div className="form-control">
@@ -65,7 +65,7 @@ const LogIn = () => {
                   type="password"
                   name="password"
                   placeholder="password"
-                  className="input input-bordered text-white"
+                  className="input input-bordered "
                 />
               </div>
               <div className="form-control mt-6">
