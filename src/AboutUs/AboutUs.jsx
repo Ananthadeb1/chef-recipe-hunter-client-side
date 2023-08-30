@@ -2,7 +2,7 @@
 const AboutUs = () => {
   return (
     <div>
-      <h2 className="text-5xl text-center font-bold mt-10 mb-5">About Us</h2>
+      <h2 className="text-5xl text-center font-bold mt-10 mb-5">About U</h2>
       <div className="hero mb-10">
                     <div className="hero-content flex-col lg:flex-row-reverse">
                         <img src="https://png.pngtree.com/element_our/png/20180918/chef-cooking-fried-chicken-and-delicious-sign-png_103460.jpg" className="max-w-sm rounded-lg shadow-2xl" />
