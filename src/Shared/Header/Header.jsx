@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Aurhentications/AuthProvier/AuthProvider";
 import { toast } from "react-hot-toast";
-import { FaUser } from "react-icons/fa";
+import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
 
@@ -21,10 +21,10 @@ const Header = () => {
   const navOptions = (
     <>
       <li>
-        <NavLink  to="/" className={({isActive}) =>  isActive ? 'text-orange-500 font-bold mx-4': 'mx-4'}>Home</NavLink>
+        <NavLink  to="/" className={({isActive}) =>  isActive ? 'underline font-bold mx-4': 'mx-4'}>Home</NavLink>
       </li>
       <li>
-        <NavLink  to="/blog" className={({isActive}) =>  isActive ? 'text-orange-500 font-bold mx-4': 'mx-4'}>Blog</NavLink>
+        <NavLink  to="/blog" className={({isActive}) =>  isActive ? 'underline font-bold mx-4': 'mx-4'}>Blog</NavLink>
       </li>
       {user ? ( 
           <li>
@@ -33,14 +33,14 @@ const Header = () => {
       ) : (
         
           <li>
-            <NavLink to="/login" className={({isActive}) => isActive ? 'text-orange-500 font-bold mx-4': 'mx-4'}>LogIn</NavLink>
+            <NavLink to="/login" className={({isActive}) => isActive ? 'underline font-bold mx-4': 'mx-4'}>LogIn</NavLink>
           </li>
       )}
     </>
   );
   return (
     <>
-      <div className="navbar bg-slate-900 text-white">
+      <div className="navbar bg-[#FFB936] text-[#0C0F26] sm:px-5 sm:py-5 text-2xl">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -61,12 +61,12 @@ const Header = () => {
             </label>
             <ul
               tabIndex={0}
-              className=" menu-sm dropdown-content mt-3  z-[1] p-2 shadow bg-slate-900 rounded-box w-52 "
+              className=" menu-sm dropdown-content mt-3  z-[1] p-2 shadow bg-[#FFB936] rounded-box w-52 "
             >
               {navOptions}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">Chef's World</a>
+          <a className="btn btn-ghost normal-case text-2xl">Chef's World</a>
         </div>
         <div className="navbar-center hidden lg:flex ">
           <ul className="menu-horizontal px-1 ">
@@ -76,7 +76,7 @@ const Header = () => {
         <div className="navbar-end">
             {
               user ? <img src={user?.photoURL} alt="" className="w-12 h-12 my-4 md:my-0 rounded-full aspect-square " />
-              :<FaUser></FaUser>
+              :<FaUserCircle></FaUserCircle>
               }
 
         </div>

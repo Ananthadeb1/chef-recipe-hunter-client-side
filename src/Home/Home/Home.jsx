@@ -18,9 +18,10 @@ const Home = () => {
                         }
                     </div>
                 </div>
-
             </div>
-            <AboutUs></AboutUs>
+            <div>
+                <AboutUs></AboutUs>
+            </div>
         </div>
     );
 };

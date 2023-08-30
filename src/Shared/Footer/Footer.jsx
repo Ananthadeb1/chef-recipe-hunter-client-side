@@ -1,7 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 const Footer = () => {
   return (
     <>
-      <footer className="footer p-10 bg-neutral text-neutral-content">
+      <footer className="footer p-10 bg-[#FFB936] text-[#0C0F26]">
         <div>
           <p>
             Chef's world company ltd.
@@ -46,11 +47,6 @@ const Footer = () => {
               </svg>
             </a>
           </div>
-        </div>
-      </footer>
-      <footer className="footer footer-center p-4 bg-neutral text-base-content">
-        <div>
-          <p>Copyright © 2023 - All right reserved by Chefs world</p>
         </div>
       </footer>
     </>
