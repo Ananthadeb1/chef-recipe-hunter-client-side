@@ -13,7 +13,7 @@ const ChefsCard = ({chef}) => {
                     <h1>{likes} likes</h1>
                 </div>
                 <Link to={`/chef/${chef.id}`}>
-                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-violet-600 text-white hover:bg-violet-800">Details</button>
+                    <button type="button" className="flex items-center justify-center w-full p-3 font-semibold tracking-wide rounded-md bg-[#ec5122] text-white hover:bg-[#d04419]">Details</button>
                 </Link>
             </div>
         </div>
