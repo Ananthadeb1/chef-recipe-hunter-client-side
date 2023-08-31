@@ -26,11 +26,11 @@ const Home = () => {
                     </div>
                 </div>
                 
-            </div>
             <Specialitem></Specialitem>
+            <Bestrecipies></Bestrecipies>
+            </div>
             <Clientsays></Clientsays>
             <div className="w-auto sm:mx-28">
-                <Bestrecipies></Bestrecipies>
                 <AboutUs></AboutUs>
             </div>
         </div>
