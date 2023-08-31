@@ -6,7 +6,7 @@ const Ourkitchen = () => {
     return (
         <div>
             <h2 className="text-5xl text-center font-bold mt-20 mb-10">Inside Our Kitchen</h2>
-            <div className="hero lg:min-h-screen">
+            <div className="hero ">
                 <div className="hero-content flex-col lg:flex-row ">
                     <img src="https://img.freepik.com/free-photo/people-cooking-professional-food-recipe-restaurant-kitchen-using-fresh-vegetables-prepare-gourmet-meal-diverse-team-cooks-making-authentic-menu-dish-gastronomy-cuisine-service_482257-43501.jpg?w=1060&t=st=1693426431~exp=1693427031~hmac=bf136f0795ed27ae9b308a8f930ddddb4ae88f02f06b6d1410039feb6c89fe80" className=" lg:w-1/2 rounded-lg shadow-2xl" />
                     <div className="sm:pl-5">
