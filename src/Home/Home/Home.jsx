@@ -6,6 +6,7 @@ import AboutUs from "../../AboutUs/AboutUs";
 import Ourkitchen from "../Ourkitchen/Ourkitchen";
 import Clientsays from "../Clientsays/Clientsays";
 import Bestrecipies from "../Bestrecipies/Bestrecipies";
+import Specialitem from "../Specialitem/Specialitem";
 
 const Home = () => {
     const { chefs } = useContext(AuthContext);
@@ -24,12 +25,14 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                    <AboutUs></AboutUs>
+                
             </div>
-                    <Clientsays></Clientsays>
-                    <div className="w-auto sm:mx-28">
-                        <Bestrecipies></Bestrecipies>
-                    </div>
+            <Specialitem></Specialitem>
+            <Clientsays></Clientsays>
+            <div className="w-auto sm:mx-28">
+                <Bestrecipies></Bestrecipies>
+                <AboutUs></AboutUs>
+            </div>
         </div>
     );
 };

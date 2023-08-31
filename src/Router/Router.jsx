@@ -7,6 +7,8 @@ import ChefsDetails from "../ChefsDetails/ChefsDetails";
 import Blog from "../Blog/Blog";
 import PrivateRoute from "../Shared/PrivetRoute/PrivetRoute";
 import ErrorPage from "../Shared/ErrorPage/ErrorPage";
+import Bestrecipies from "../Home/Bestrecipies/Bestrecipies";
+import AboutUs from "../AboutUs/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
       {
         path: "/blog",
         element: <Blog></Blog>
+      },
+      {
+        path: "/best",
+        element: <Bestrecipies></Bestrecipies>
+      },
+      {
+        path: "/aboutus",
+        element: <AboutUs></AboutUs>
       }
     ],
   },

@@ -2,7 +2,7 @@
 const Bestrecipies = () => {
     return (
             <div className="mb-10">
-            <h2 className="text-5xl text-center font-bold mt-20 mb-5">Best Recipes We Offer</h2>
+            <h2 className="text-5xl text-center font-bold mt-20 mb-5">Best Courses We Offer</h2>
                 <div className="sm:flex sm:justify-center">
                     <div>
                         <div className="card ">
