@@ -4,7 +4,7 @@ const ChefsCard = ({chef}) => {
     const {image,name,experience,number_of_recipes,likes } = chef;
     return (
         <div className="rounded-md shadow-md bg-gray-200 text-black transform duration-500 ease-in-out hover:scale-105 hover:shadow-lg ">
-            <img src={image} alt="" className="rounded-t-md h-72 bg-gray-500" />
+            <img src={image} alt="" className="rounded-t-md h-72 w-full bg-gray-500" />
             <div className="flex flex-col justify-between p-6 space-y-8">
                 <div className="space-y-2">
                     <h2 className="text-3xl font-semibold tracking-wide">{name}</h2>

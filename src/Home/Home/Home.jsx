@@ -5,6 +5,7 @@ import { AuthContext } from "../../Aurhentications/AuthProvier/AuthProvider";
 import AboutUs from "../../AboutUs/AboutUs";
 import Ourkitchen from "../Ourkitchen/Ourkitchen";
 import Clientsays from "../Clientsays/Clientsays";
+import Bestrecipies from "../Bestrecipies/Bestrecipies";
 
 const Home = () => {
     const { chefs } = useContext(AuthContext);
@@ -26,6 +27,9 @@ const Home = () => {
                     <AboutUs></AboutUs>
             </div>
                     <Clientsays></Clientsays>
+                    <div className="w-auto sm:mx-28">
+                        <Bestrecipies></Bestrecipies>
+                    </div>
         </div>
     );
 };
